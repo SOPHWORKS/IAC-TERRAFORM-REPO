@@ -1,7 +1,7 @@
 variable "region" {
     type = string
     description = "aws provider region"
-    default = "us=east-1"
+    default = "us-east-1"
   }
 
   variable "ami_id" {
@@ -21,20 +21,20 @@ variable "instance_type" {
 variable "cidr_block" {
     type = string
     description = "vpc cidr_block"
-    default = "10.0.0.0/16"
+    default = "100.0.0.0/16"
   
 }
 
 variable "public_subnet" {
     type = string
     description = "public_subnet cidr_block"
-    default = "10.0.0.0/24"
+    default = "100.0.0.0/24"
   
 }
 
 variable "private_subnet" {
     type = string
     description = "private subnet cidr_block"
-    default = "10.0.0.0/24"
+    default = "100.0.1.0/24"
   
 }
