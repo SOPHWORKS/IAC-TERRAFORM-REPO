@@ -6,9 +6,21 @@ resource "aws_vpc" "my_vpc" {
   cidr_block = var.cidr_block
 }
 
+#using var.ami_id
+
+/*resource "aws_instance" "web" {
+  ami           =  var
+  instance_type = var.instance_type
+
+  tags = {
+    Name = "terraform"
+  }
+}*/
+
+#using datasource instead of var.ami_id
 
 resource "aws_instance" "web" {
-  ami           =  var.ami_id
+  ami           =  data.aws_ami.my_ami.id
   instance_type = var.instance_type
 
   tags = {
